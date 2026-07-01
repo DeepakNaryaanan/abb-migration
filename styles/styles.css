@@ -31,10 +31,10 @@
   --link-color: var(--brand-primary);
   --link-hover-color: var(--brand-hero-end);
 
-  /* fonts — Museo is the brand face (licensed, loaded via font service when
-     available); roboto is bundled as the fallback render font */
-  --body-font-family: 'museo-sans', roboto, roboto-fallback, sans-serif;
-  --heading-font-family: 'museo-700', roboto-condensed, roboto-condensed-fallback, sans-serif;
+  /* fonts — Open Sans (body) is self-hosted; headings use Museo (the brand
+     face, licensed) when present, falling back to self-hosted Poppins */
+  --body-font-family: 'Open Sans', open-sans-fallback, sans-serif;
+  --heading-font-family: 'museo-700', poppins, poppins-fallback, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -53,16 +53,16 @@
   --nav-height: 64px;
 }
 
-/* fallback fonts */
+/* fallback fonts (Arial-based, tuned to reduce layout shift) */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
+  font-family: open-sans-fallback;
+  size-adjust: 100%;
   src: local('Arial');
 }
 
 @font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
+  font-family: poppins-fallback;
+  size-adjust: 112%;
   src: local('Arial');
 }
 
@@ -120,8 +120,8 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 1.2;
   scroll-margin: 40px;
 }
 
