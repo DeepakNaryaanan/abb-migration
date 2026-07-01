@@ -323,3 +323,14 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* brand: indication / important safety information (default content) */
+main .default-content-wrapper h2,
+main .default-content-wrapper h3 {
+  color: #034a66;
+}
+
+main .default-content-wrapper h2 {
+  border-top: 2px solid #034a66;
+  padding-top: 16px;
+}
