@@ -11,17 +11,30 @@
  */
 
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  /* brand palette (imported from lupronpedpro.com) */
+  --brand-primary: #034a66;
+  --brand-hero-start: #09098f;
+  --brand-hero-end: #1773b5;
+  --brand-green-start: #2eb135;
+  --brand-green-end: #aec7af;
+  --brand-teal: #249cd0;
+  --brand-teal-hover: #1b7ba6;
+  --brand-pink: #ec457f;
+  --brand-pink-hover: #d3316a;
+  --brand-border: #e3e3e3;
 
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  /* semantic colors */
+  --background-color: white;
+  --light-color: #f5f5f5;
+  --dark-color: #555;
+  --text-color: #333;
+  --link-color: var(--brand-primary);
+  --link-hover-color: var(--brand-hero-end);
+
+  /* fonts — Museo is the brand face (licensed, loaded via font service when
+     available); roboto is bundled as the fallback render font */
+  --body-font-family: 'museo-sans', roboto, roboto-fallback, sans-serif;
+  --heading-font-family: 'museo-700', roboto-condensed, roboto-condensed-fallback, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -327,10 +340,10 @@ main .section.highlight {
 /* brand: indication / important safety information (default content) */
 main .default-content-wrapper h2,
 main .default-content-wrapper h3 {
-  color: #034a66;
+  color: var(--brand-primary);
 }
 
 main .default-content-wrapper h2 {
-  border-top: 2px solid #034a66;
+  border-top: 2px solid var(--brand-primary);
   padding-top: 16px;
 }
