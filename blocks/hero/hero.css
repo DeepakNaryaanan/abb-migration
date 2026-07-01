@@ -5,18 +5,22 @@
 
 .hero {
   position: relative;
-  padding: 48px 24px 56px;
-  min-height: 300px;
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 320px;
+  padding: 40px 24px 24px;
   display: flex;
-  align-items: center;
-  background-image: linear-gradient(180deg, var(--brand-hero-start), var(--brand-hero-end));
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(135deg, var(--brand-hero-start), var(--brand-hero-end));
   color: #fff;
+  overflow: hidden;
 }
 
 .hero > div {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 560px;
   width: 100%;
+  margin: 0 auto;
 }
 
 /* eyebrow (first paragraph) */
@@ -30,17 +34,16 @@
 }
 
 .hero h1 {
-  max-width: 640px;
+  max-width: 460px;
   margin: 0;
   color: #fff;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.05;
-  text-transform: uppercase;
 }
 
 /* CTA link (rendered as a button by decorateButtons) */
 .hero .button-container {
-  margin: 28px 0 0;
+  margin: 24px 0 0;
 }
 
 .hero a.button,
@@ -59,26 +62,40 @@
   background-color: var(--brand-pink-hover);
 }
 
+/* rocket-girl art */
+/* stylelint-disable no-descending-specificity */
+.hero p.hero-art,
+.hero p:has(picture) {
+  margin: 20px 0 0;
+  line-height: 0;
+}
+/* stylelint-enable no-descending-specificity */
+
 .hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  display: inline-block;
 }
 
 .hero img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+  width: 160px;
+  height: auto;
 }
 
 @media (width >= 900px) {
   .hero {
-    padding: 64px 32px 72px;
+    padding: 48px 40px;
+    min-height: 380px;
+  }
+
+  .hero > div {
+    margin: 0 auto 0 0;
+    padding-left: 24px;
   }
 
   .hero h1 {
-    font-size: 52px;
+    font-size: 46px;
+  }
+
+  .hero img {
+    width: 190px;
   }
 }

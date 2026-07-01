@@ -79,9 +79,26 @@
 }
 
 @media (width >= 900px) {
+  /* two stats side by side when the panel stands alone */
   .cards.stats > ul {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
+  }
+
+  /* stats as the right column of the hero banner: fill height, stack vertically */
+  main .section:has(> .hero-wrapper) .cards.stats {
+    height: 100%;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    padding: 48px 40px;
+  }
+
+  main .section:has(> .hero-wrapper) .cards.stats > ul {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: none;
+    width: 100%;
   }
 }
 

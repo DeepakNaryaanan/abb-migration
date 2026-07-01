@@ -347,3 +347,22 @@ main .default-content-wrapper h2 {
   border-top: 2px solid var(--brand-primary);
   padding-top: 16px;
 }
+
+/* two-column hero banner: hero (left) + stats panel (right) share one section */
+@media (width >= 900px) {
+  main .section:has(> .hero-wrapper):has(> .cards-wrapper) {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: stretch;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+  }
+
+  main .section:has(> .hero-wrapper):has(> .cards-wrapper) > div {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+}
