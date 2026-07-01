@@ -25,3 +25,127 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* ---------- Stats variant (green callout panel) ---------- */
+.cards.stats {
+  background-image: linear-gradient(60deg, #2eb135, #aec7af);
+  padding: 32px 24px;
+  border-radius: 8px;
+}
+
+.cards.stats > ul {
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cards.stats > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+}
+
+.cards.stats .cards-card-image {
+  flex: 0 0 96px;
+}
+
+.cards.stats > ul > li img {
+  width: 96px;
+  height: 96px;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.cards.stats .cards-card-body {
+  margin: 0;
+}
+
+.cards.stats .cards-card-body p {
+  margin: 0;
+  font-weight: 700;
+  color: #fff;
+  font-size: var(--body-font-size-s);
+}
+
+.cards.stats .cards-card-body p:not(:first-child) {
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: var(--body-font-size-xs);
+  opacity: 0.9;
+}
+
+@media (width >= 900px) {
+  .cards.stats > ul {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+/* ---------- Promo variant (icon cards with CTA) ---------- */
+.cards.promo > ul {
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.cards.promo > ul > li {
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  padding: 28px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards.promo .cards-card-image {
+  margin-bottom: 16px;
+}
+
+.cards.promo > ul > li img {
+  width: 88px;
+  height: 88px;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.cards.promo .cards-card-body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cards.promo .cards-card-body p:first-child {
+  margin-top: 0;
+  color: #034a66;
+  font-weight: 700;
+  flex: 1;
+}
+
+.cards.promo .cards-card-body .button-container {
+  margin: 20px 0 0;
+}
+
+.cards.promo a:any-link {
+  display: inline-block;
+  padding: 10px 26px;
+  border-radius: 22px;
+  background-color: #249cd0;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cards.promo a:any-link:hover {
+  background-color: #1b7ba6;
+}
+
+@media (width >= 900px) {
+  .cards.promo > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
