@@ -21,7 +21,7 @@ footer .footer p {
 
 /* brand links */
 footer a:any-link {
-  color: #034a66;
+  color: var(--brand-primary);
   text-decoration: none;
 }
 

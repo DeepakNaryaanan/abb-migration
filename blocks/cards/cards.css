@@ -28,7 +28,7 @@
 
 /* ---------- Stats variant (green callout panel) ---------- */
 .cards.stats {
-  background-image: linear-gradient(60deg, #2eb135, #aec7af);
+  background-image: linear-gradient(60deg, var(--brand-green-start), var(--brand-green-end));
   padding: 32px 24px;
   border-radius: 8px;
 }
@@ -92,7 +92,7 @@
 }
 
 .cards.promo > ul > li {
-  border: 1px solid #e3e3e3;
+  border: 1px solid var(--brand-border);
   border-radius: 8px;
   padding: 28px 24px;
   text-align: center;
@@ -121,7 +121,7 @@
 
 .cards.promo .cards-card-body p:first-child {
   margin-top: 0;
-  color: #034a66;
+  color: var(--brand-primary);
   font-weight: 700;
   flex: 1;
 }
@@ -134,14 +134,14 @@
   display: inline-block;
   padding: 10px 26px;
   border-radius: 22px;
-  background-color: #249cd0;
+  background-color: var(--brand-teal);
   color: #fff;
   font-weight: 700;
   text-decoration: none;
 }
 
 .cards.promo a:any-link:hover {
-  background-color: #1b7ba6;
+  background-color: var(--brand-teal-hover);
 }
 
 @media (width >= 900px) {
