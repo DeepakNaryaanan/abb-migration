@@ -18,3 +18,43 @@ footer .footer p {
     padding: 40px 32px 24px;
   }
 }
+
+/* brand links */
+footer a:any-link {
+  color: #034a66;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* sitemap columns */
+footer .columns ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+footer .columns li {
+  padding: 4px 0;
+}
+
+/* column heading = the first link in each column */
+footer .columns > div > div > a:first-child,
+footer .columns > div > div > p:first-child a {
+  font-weight: 700;
+}
+
+/* abbvie logo */
+footer .footer img {
+  width: 96px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+/* legal + copyright block */
+footer .footer > div:last-child p {
+  margin: 4px 0;
+  color: var(--dark-color);
+}
